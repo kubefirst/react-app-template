@@ -1,0 +1,14 @@
+.container {
+  color: white;
+  height: 600px;
+}
+
+.template-block {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 500px;
+}
