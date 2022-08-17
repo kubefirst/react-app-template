@@ -1,8 +1,7 @@
 import React from 'react';
 
-import './style.css';
-
 import RayImage from '../../assets/k-ray.svg';
+import './style.css';
 
 const Home = () => {
   return (

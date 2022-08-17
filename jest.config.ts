@@ -15,4 +15,5 @@ const config: Config.InitialOptions = {
     '^.+\\.(jpg|jpeg|png|gif|svg|css)$': '<rootDir>/tests/file-mock.ts',
   },
 };
+
 export default config;
