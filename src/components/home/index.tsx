@@ -6,7 +6,7 @@ import RayImage from '../../assets/k-ray.svg';
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container" data-testid="home-component">
       <div className="template-block">
         <div>
           <h3>React App Template</h3>
