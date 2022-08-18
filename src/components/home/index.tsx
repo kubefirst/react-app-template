@@ -1,12 +1,11 @@
 import React from 'react';
 
-import RayImage from '../../assets/k-ray.svg';
-import './style.css';
+import { Container, Ray, Template } from './home.styled';
 
 const Home = () => {
   return (
-    <div className="container" data-testid="home-component">
-      <div className="template-block">
+    <Container data-testid="home-component">
+      <Template className="template-block">
         <div>
           <h3>React App Template</h3>
           <ul>
@@ -17,9 +16,9 @@ const Home = () => {
             <li>Eslint - prettier</li>
           </ul>
         </div>
-        <img src={RayImage} alt="k-ray" />
-      </div>
-    </div>
+        <Ray alt="k-ray" />
+      </Template>
+    </Container>
   );
 };
 
