@@ -33,7 +33,6 @@
     "no-debugger": "error",
     "prefer-template": "warn",
     "react-hooks/exhaustive-deps": "error",
-    "@typescript-eslint/no-explicit-any": "error",
-    "implicit-arrow-linebreak": ["error", "beside"]
+    "@typescript-eslint/no-explicit-any": "error"
   }
 }

@@ -14,6 +14,9 @@ const config: Config.InitialOptions = {
     '^.+\\.(ts|tsx)?$': 'ts-jest',
     '^.+\\.(jpg|jpeg|png|gif|svg|css)$': '<rootDir>/tests/file-mock.ts',
   },
+  moduleNameMapper: {
+    'tests/(.*)': '<rootDir>/tests/$1',
+  },
 };
 
 export default config;
