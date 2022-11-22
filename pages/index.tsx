@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 
-import { useAppDispatch } from '../../hooks';
-import { setUser } from '../../slices/user.slice';
-import HomeComponent from '../../components/home';
+import { setUser } from '../redux/slices/user.slice';
+import HomeComponent from '../components/home';
+import { useAppDispatch } from '../redux/store';
 
 const Home = () => {
   const dispatch = useAppDispatch();

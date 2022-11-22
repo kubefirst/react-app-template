@@ -1,22 +1,20 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import theme from '../src/theme';
-import { store } from '../src/store';
+import theme from '../theme/index';
+import { makeStore } from '../redux/store';
 
-function setupComponent<T>(Component: React.FC<T>, defaultProps?: T) {
-  return async function (props?: T) {
+function setupComponent<T>(Component: React.FC, defaultProps?: T) {
+  return async function (testProps?: T) {
+    const store = makeStore();
     return await render(
-      <Provider store={store}>
-        <BrowserRouter>
-          <ThemeProvider theme={theme}>
-            <Component {...(defaultProps as T)} {...(props as T)} />
-          </ThemeProvider>
-        </BrowserRouter>
-      </Provider>,
+      <ThemeProvider theme={theme}>
+        <Provider store={store}>
+          <Component {...defaultProps} {...testProps} />
+        </Provider>
+      </ThemeProvider>,
     );
   };
 }

@@ -2,7 +2,6 @@ import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
   verbose: true,
-  testEnvironment: 'jsdom',
   preset: 'ts-jest',
   moduleFileExtensions: ['js', 'json', 'tsx', 'ts'],
   setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
@@ -16,6 +15,12 @@ const config: Config.InitialOptions = {
   },
   moduleNameMapper: {
     'tests/(.*)': '<rootDir>/tests/$1',
+  },
+  testEnvironment: 'jsdom',
+  globals: {
+    'ts-jest': {
+      tsconfig: '<rootDir>/tests/tsconfig.test.json',
+    },
   },
 };
 
