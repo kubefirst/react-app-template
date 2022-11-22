@@ -1,5 +1,6 @@
 import { screen } from '@testing-library/react';
-import setupComponent from 'tests/setup';
+
+import setupComponent from '../../tests/setup';
 
 import Home from './index';
 
